@@ -29,3 +29,11 @@ Add an Intern
 Finish Building the Team
 
 
+# Resources
+Video on how to test data in node using jest from Web Dev Simplified
+https://www.youtube.com/watch?v=FgnxcUQ5vho
+
+I looked up the documentation for creating classes in node and found the following example code
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+
+
