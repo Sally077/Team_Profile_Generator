@@ -29,11 +29,79 @@ Add an Intern
 Finish Building the Team
 
 
-# Resources
+## Table of Contents
+
+- [Description](#description)
+- [Improvements](#improvements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Badges](#badges)
+- [Features](#features)
+- [Contribution](#how-to-contribute)
+- [Tests](#tests)
+
+## Installation
+<a id="installation"></a>
+
+I have installed node.js and inquirer: ^8.0.0  and jest as dependancies. 
+
+## Usage
+<a id="usage"></a>
+
+My program can be -------------------------------------
+
+To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+
+
+
+
+
+## Credits
+<a id="credits"></a>
+
+There were no collaborators in this task.
+
+The following resources below show videos and documentation that I have watched/used to create my project.
+
+
 Video on how to test data in node using jest from Web Dev Simplified
 https://www.youtube.com/watch?v=FgnxcUQ5vho
 
 I looked up the documentation for creating classes in node and found the following example code
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+
+This video helped me to apply the data to the classes correctly
+https://www.youtube.com/watch?v=Jv2uxzhPFl4&t=424s
+
+
+
+
+## License
+<a id="license"></a>
+
+I have chosen a MIT license for this project
+
+
+## Badges
+<a id="badges"></a>
+
+I now have 3 git hub badge acheivements pullshark x2 and YOLO and a quickdraw badge
+
+## Features
+<a id="features"></a>
+
+## How to Contribute
+<a id="contribution"></a>
+
+N/A
+
+## Tests
+<a id="tests"></a>
+
+Test_1 - Parent class for Employee code:
+
+
 
 
