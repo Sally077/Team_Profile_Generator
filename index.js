@@ -12,37 +12,52 @@ const render = require("./src/page-template.js");
 
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
+const promptUser = () =>
+inquirer.prompt([
 
-const questions = [
     {
         type: "input",
-        name: "title",
-        message: "Project title : "
+        name: "Team Manager",
+        message: "What is the Team Manager's Name? : "
     },
     {
         type: "input",
-        name: "description",
-        message: "Description of Project : "
+        name: "Manager Id",
+        message: "What is the Team Manager's ID?  : "
     },
     {
         type: "input",
-        name: "installation",
-        message: "Installation of Instructions : "
+        name: "email",
+        message: "What is the Team Manager's Email?  : "
+    },
+    {
+        type: "input",
+        name: "officeNumber",
+        message: "What is the Team Manager's office number?  : "
     },
     {
         type: "list",
-        name: "license",
-        message: "license",
-        choices:['mit', 'isc', 'gnpulv3'],
+        name: "Employee",
+        message: "What type of Employee would you like to add? (use arrow key)",
+        choices:['Engineer', 'Intern', 'No more team members to add'],
         filter(val) {
             return val.toLowerCase(); // will apply lowercase
         }
     },
-    {
-        type: "input",
-        name: "usage",
-        message: "Project Use : "
-    },
+     // ------------------------------------------
+     function Employee() {
+        if (choices === "Engineer") {
+            
+                type: "input",
+                name: "Engineer Name",
+                message: "Enter the Engineer's Name : "
+            },
+            
+        }
+
+
+
+    
     {
         type: "input",
         name: "contribution",
@@ -65,26 +80,28 @@ const questions = [
         message: "For questions about the readme generator (github) : "
     },
 
-]
+])
+
+
 
 // Code to run Query Function
 
-// function runQuery() {
-//     return inquirer.prompt(questions) // prompt displays the questions
-//     .then((answers)=> { //then command works with the catch command to async or handle the error
-//         const mark = MarkDown.generateReadme(answers) //generates mark down answers in readme
-//         fs.writeFile('README.md', mark, function(err) { //fs.write document to write a file called readme.md
-//             if(err) { //if statement checks that file has been written successfully
-//                 console.log('Fail: Could not save file', err) 
-//             } else {
-//                 console.log("success: new README.md file generated inside the current folder")
-//             }
-//         })
+function runQuery() {
+    return inquirer.prompt(promptUser) // prompt displays the questions
+    .then((answers)=> { //then command works with the catch command to async or handle the error
+        const mark = MarkDown.generateReadme(answers) //generates mark down answers in readme
+        fs.writeFile('README.md', mark, function(err) { //fs.write document to write a file called readme.md
+            if(err) { //if statement checks that file has been written successfully
+                console.log('Fail: Could not save file', err) 
+            } else {
+                console.log("success: new README.md file generated inside the current folder")
+            }
+        })
 
-//     })
-//     .catch((error)=> { //catches statements and defines a block of code
-//         console.log(error) //console log error in the terminal
-//     })
-// }
-// //runs the query
-// runQuery()
+    })
+    .catch((error)=> { //catches statements and defines a block of code
+        console.log(error) //console log error in the terminal
+    })
+}
+//runs the query
+runQuery()
