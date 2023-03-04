@@ -75,7 +75,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 This video helped me to apply the data to the classes correctly
 https://www.youtube.com/watch?v=Jv2uxzhPFl4&t=424s
 
-
+To complete the tests to inhertit values from employee to manager I looked at the bootcamp training exercises for week 12 on subclasses and added the super value to the code.
 
 
 ## License
