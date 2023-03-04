@@ -1,5 +1,7 @@
 # Team_Profile_Generator
 
+mit:'[![license: mit](https://img.shields.io/badge/MIT-License__for__MIT-yellowgreen)](https://opensource.org/license/mit/)'
+
 ## Description
 
 User Story: As a manager I would like to generate a webpage that displays my teams basic information. So that I have quick access to their e-mails and github profiles.
@@ -45,7 +47,7 @@ Finish Building the Team
 ## Installation
 <a id="installation"></a>
 
-I have installed node.js and inquirer: ^8.0.0  and jest as dependancies. 
+I have installed node.js and inquirer: ^8.2.4  and jest ^29.4.3 as dependancies. 
 
 ## Usage
 <a id="usage"></a>
@@ -76,6 +78,10 @@ This video helped me to apply the data to the classes correctly
 https://www.youtube.com/watch?v=Jv2uxzhPFl4&t=424s
 
 To complete the tests to inhertit values from employee to manager I looked at the bootcamp training exercises for week 12 on subclasses and added the super value to the code.
+
+I looked at the following code to help me to structure my code when nesting if statements as options using inquirer.
+https://stackoverflow.com/questions/74075310/how-to-properly-nest-inquirer-prompts
+
 
 
 ## License
