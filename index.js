@@ -37,51 +37,91 @@ inquirer.prompt([
     },
     {
         type: "list",
-        name: "Employee",
+        name: "action",
         message: "What type of Employee would you like to add? (use arrow key)",
-        choices:['Engineer', 'Intern', 'No more team members to add'],
-        filter(val) {
-            return val.toLowerCase(); // will apply lowercase
-        }
-    },
-     // ------------------------------------------
-     function Employee() {
-        if (choices === "Engineer") {
-            
-                type: "input",
-                name: "Engineer Name",
-                message: "Enter the Engineer's Name : "
-            },
-            
-        }
-
-
+        choices:['Engineer', 
+                 'Intern', 
+                 'Exit'
+                ]
+           }])
+        
+        
 
     
-    {
-        type: "input",
-        name: "contribution",
-        message: "Contributors : "
-    },
-    {
-        type: "input",
-        name: "tests",
-        message: "Description of Test : "
-    },
-    {
-        type: "input",
-        name: "email",
-        message: "For questions please email (e-mail) : "
-        
-    },
-    {
-        type: "input",
-        name: "github",
-        message: "For questions about the readme generator (github) : "
-    },
+     // function added to handle the actions chosen by the user in the main loop
+        const performAction = async (action) => {
+            switch(action) {
+                case "Engineer":[
+                    {
+                        type: "input",
+                        name: "Engineer Name",
+                        message: "What is the Engineer's name?  : "
+                    },
+                    {
+                        type: "input",
+                        name: "Engineer ID",
+                        message: "What is the Engineer's ID?  : "
+                    },
+                    {
+                        type: "input",
+                        name: "Engineer Email",
+                        message: "What is the Engineer's Email?  : "
+                    },
+                    {
+                        type: "input",
+                        name: "Engineer GitHub",
+                        message: "What is the Engineer's GitHub Username?  : "
+                    },
+                ]
+                  switch(action) { 
+                case "Intern" :[
+                    {
+                        type: "input",
+                        name: "Intern Name",
+                        message: "What is the Intern's name?  : "
+                    },
+                    {
+                        type: "input",
+                        name: "Intern ID",
+                        message: "What is the Interns's ID?  : "
+                    },
+                    {
+                        type: "input",
+                        name: "Intern Email",
+                        message: "What is the Interns's Email?  : "
+                    },
+                    {
+                        type: "input",
+                        name: "Intern School",
+                        message: "What is the name of the Intern's school?  : "
+                    },
+                ]
+                    
 
-])
+                  }
 
+
+
+                    let employeeData = await prompt(questions); // Grab the employee data by awaiting prompt
+                    console.log(employeeData); // Console out the data
+                    break;
+                default:
+                    break;
+            }
+            
+        // Main logic flow
+         const init = async () => {
+         let action;
+
+        // While the user has not chosen to exit...
+        while (action != "Exit") {
+            action = (await prompt(promptUser)).action; // Get their choice by awaiting a prompt
+            performAction(action); // Perform that chosen action
+        }
+    }
+
+init();
+    
 
 
 // Code to run Query Function
@@ -89,12 +129,12 @@ inquirer.prompt([
 function runQuery() {
     return inquirer.prompt(promptUser) // prompt displays the questions
     .then((answers)=> { //then command works with the catch command to async or handle the error
-        const mark = MarkDown.generateReadme(answers) //generates mark down answers in readme
-        fs.writeFile('README.md', mark, function(err) { //fs.write document to write a file called readme.md
+        const outputPath = MarkDown.pageTemplate.js(answers) //generates mark down answers in readme
+        fs.writeFile('team.html', outputPath, function(err) { //fs.write document to write a file called readme.md
             if(err) { //if statement checks that file has been written successfully
                 console.log('Fail: Could not save file', err) 
             } else {
-                console.log("success: new README.md file generated inside the current folder")
+                console.log("success: new team.html file create")
             }
         })
 
@@ -105,3 +145,5 @@ function runQuery() {
 }
 //runs the query
 runQuery()
+
+        }
