@@ -129,7 +129,7 @@ init();
 function runQuery() {
     return inquirer.prompt(promptUser) // prompt displays the questions
     .then((answers)=> { //then command works with the catch command to async or handle the error
-        const outputPath = MarkDown.pageTemplate.js(answers) //generates mark down answers in readme
+        const outputPath = render.pageTemplate.js(answers) //generates mark down answers in readme
         fs.writeFile('team.html', outputPath, function(err) { //fs.write document to write a file called readme.md
             if(err) { //if statement checks that file has been written successfully
                 console.log('Fail: Could not save file', err) 
@@ -147,3 +147,7 @@ function runQuery() {
 runQuery()
 
         }
+
+module.exports = Manager
+module.exports = Engineer
+module.exports = Intern
