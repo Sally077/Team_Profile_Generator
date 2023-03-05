@@ -93,7 +93,7 @@ I have chosen a MIT license for this project
 ## Badges
 <a id="badges"></a>
 
-I now have 3 git hub badge acheivements pullshark x2 and YOLO and a quickdraw badge
+I now have 3 git hub badge acheivements pullshark x 3, YOLO and a quickdraw badge
 
 ## Features
 <a id="features"></a>
@@ -107,6 +107,41 @@ N/A
 <a id="tests"></a>
 
 Test_1 - Parent class for Employee code:
+
+<img src="./Images/test_01.png">
+
+Test_2: Run jest to check data is working effectively for Employee Class
+
+<img src="./Images/test_02.png">
+
+Test_3 create class for Manager
+
+<img src="./Images/test_03.png">
+
+Test_4: Run jest to check data is working effectively for Manager Class
+
+<img src="./Images/test_04.png">
+
+Test_5: create class for Engineer
+
+<img src="./Images/test_05.png">
+
+Test_6: Run jest to check data is working effectively for Engineer Class
+
+<img src="./Images/test_06.png">
+
+Test_7 create class for Intern
+
+<img src="./Images/test_07.png">
+
+Test_8: Run jest to check data is working effectively for Intern Class
+
+<img src="./Images/test_08.png">
+
+Test_9: All test suites and 17 tests now passed
+
+<img src="./Images/test_09.png">
+
 
 
 
