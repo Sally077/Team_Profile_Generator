@@ -82,7 +82,7 @@ To complete the tests to inhertit values from employee to manager I looked at th
 I looked at the following code to help me to structure my code when nesting if statements as options using inquirer.
 https://stackoverflow.com/questions/74075310/how-to-properly-nest-inquirer-prompts
 
-
+Support from Jose Lopez - adding functions to prompts, arrays as input and fs to save to html on index.js file.
 
 ## License
 <a id="license"></a>
