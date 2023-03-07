@@ -103,9 +103,18 @@ function engineer() {
             },
         ])
 
-        .then((response) => {
-            console.log(response);
-            options()
+        .then((answers) => {
+            // store the answers
+            console.log(answers);
+            const engineer = new Intern(
+              answers.internName,
+              answers.internId,
+              answers.internEmail,
+              answers.internSchool
+            );
+            teamMembers.push(intern);
+          // we need to then run the menu
+          options();
         });
 
     }
