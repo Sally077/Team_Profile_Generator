@@ -76,7 +76,7 @@ function engineer() {
       // we need to then run the menu
       options();
         })
-    }
+    };
 
     function intern(){
         inquirer.
@@ -106,7 +106,7 @@ function engineer() {
         .then((answers) => {
             // store the answers
             console.log(answers);
-            const engineer = new Intern(
+            const intern = new Intern(
               answers.internName,
               answers.internId,
               answers.internEmail,
@@ -117,7 +117,7 @@ function engineer() {
           options();
         });
 
-    }
+    };
 
 
 // Main logic flow
@@ -166,26 +166,4 @@ init();
 function createHtml(){
     fs.writeFileSync(outputPath, render(teamMembers))
 }
-// Code to run Query Function
 
-// function runQuery() {
-//     return inquirer.prompt(promptUser) // prompt displays the questions
-//     .then((answers)=> { //then command works with the catch command to async or handle the error
-//         const outputPath = render.pageTemplate.js(answers) //generates mark down answers in readme
-//         fs.writeFile('team.html', outputPath, function(err) { //fs.write document to write a file called readme.md
-//             if(err) { //if statement checks that file has been written successfully
-//                 console.log('Fail: Could not save file', err)
-//             } else {
-//                 console.log("success: new team.html file create")
-//             }
-//         })
-
-//     })
-//     .catch((error)=> { //catches statements and defines a block of code
-//         console.log(error) //console log error in the terminal
-//     })
-// }
-// //runs the query
-// runQuery()
-
-// }
