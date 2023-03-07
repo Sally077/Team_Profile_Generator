@@ -28,7 +28,7 @@ function options() {
           engineer();
           break;
           case "Intern":
-            
+            intern();
             break;
         default:
             createHtml()
@@ -63,44 +63,53 @@ function engineer() {
         message: "What is the Engineer's GitHub Username?  : ",
       },
     ])
-    .then((response) => {
-      console.log(response);
+    .then((answers) => {
+        // store the answers
+        console.log(answers);
+        const engineer = new Engineer(
+          answers.engineerName,
+          answers.engineerId,
+          answers.engineerEmail,
+          answers.engineerGitHub
+        );
+        teamMembers.push(engineer);
+      // we need to then run the menu
       options();
-    });
-}
+        })
+    }
 
-//           switch(action) {
-//         case "Intern" :[
-//             {
-//                 type: "input",
-//                 name: "Intern Name",
-//                 message: "What is the Intern's name?  : "
-//             },
-//             {
-//                 type: "input",
-//                 name: "Intern ID",
-//                 message: "What is the Interns's ID?  : "
-//             },
-//             {
-//                 type: "input",
-//                 name: "Intern Email",
-//                 message: "What is the Interns's Email?  : "
-//             },
-//             {
-//                 type: "input",
-//                 name: "Intern School",
-//                 message: "What is the name of the Intern's school?  : "
-//             },
-//         ]
+    function intern(){
+        inquirer.
+        prompt ([
+            {
+                type: "input",
+                name: "internName",
+                message: "What is the Intern's name?  : "
+            },
+            {
+                type: "input",
+                name: "internId",
+                message: "What is the Interns's ID?  : "
+            },
+            {
+                type: "input",
+                name: "internEmail",
+                message: "What is the Interns's Email?  : "
+            },
+            {
+                type: "input",
+                name: "internSchool",
+                message: "What is the name of the Intern's school?  : "
+            },
+        ])
 
-//           }
+        .then((response) => {
+            console.log(response);
+            options()
+        });
 
-//             let employeeData = await prompt(questions); // Grab the employee data by awaiting prompt
-//             console.log(employeeData); // Console out the data
-//             break;
-//         default:
-//             break;
-//     }
+    }
+
 
 // Main logic flow
 const init = () => {
